@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>彭博琛 - 履歷</title>
+  <title>彭博琛 - Resume</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body { font-family: "Segoe UI", Arial, sans-serif; background: #f8f9fa; }
@@ -21,96 +21,176 @@
       border: 4px solid #fff;
       box-shadow: 0 0 8px rgba(0,0,0,0.3);
     }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
   </style>
 </head>
 <body>
 
-  <!-- 頁首 -->
+  <!-- Header -->
   <header>
-    <!-- 照片 -->
-    <img src="photo.jpg" alt="個人照片" class="profile-pic">
-    
+    <img src="photo.jpg" alt="Profile Photo" class="profile-pic">
     <h1>彭博琛 (Patrick Pang)</h1>
-    <p>軟體工程師 | C# .NET · Vue3 · Angular · SQL Server </p>
     <p>Email: <a href="mailto:pa61812@gmail.com" class="text-white">pa61812@gmail.com</a> |
        LinkedIn: <a href="https://www.linkedin.com/in/patrickpang" class="text-white">patrickpang</a></p>
+
+    <!-- Language switch -->
+    <div class="mt-3">
+      <button class="btn btn-light btn-sm" onclick="switchLang('zh')">中文</button>
+      <button class="btn btn-light btn-sm" onclick="switchLang('en')">English</button>
+    </div>
   </header>
 
   <div class="container mt-4">
 
-    <!-- 簡介 -->
-    <div class="section">
-      <h2>簡介</h2>
-      <p>
-	  具備 7 年 C# .NET 後端開發經驗，熟悉 RESTful API 設計、資料存取效能優化與系統模組化開發。<br>
-	  前端方面擁有 3 年 Vue3 + Quasar 與2 年 Angular 開發經驗，能獨立完成元件設計與畫面開發。<br>
-	  也具備 1年 Android App 開發經驗（Java/Kotlin），熟悉 API 串接與基本 UI邏輯實作。<br>
-	  參與過金融客服系統、智慧物流 App、RWD 網站優化等實務專案，擅長跨技術整合與系統效能優化，致力於提升用戶體驗與開發效率。<br>
-	  具備強烈的自學能力，成功自學 Java/Kotlin 並實際應用於行動端專案。<br>
-	  曾協助並指導 2 名工程師完成專案交付，具備團隊合作與技術傳承經驗。技術方面，熟悉 C# .NET、Vue3、Angular、Android（Java/Kotlin），熟悉基本 HTML/CSS/JavaScript 語法，能配合框架進行前端開發。<br>
-	  熟悉 SQL Server 與雲端部署（Azure）、CI/CD 流程，並具備系統架構設計、測試流程規劃與技術文件撰寫經驗。<br>
-      </p>
+    <!-- Chinese Version -->
+    <div id="lang-zh" class="lang-section active">
+      <div class="section">
+        <h2>簡介</h2>
+        <p>
+          具備 7 年 C# .NET 後端開發經驗，熟悉 RESTful API 設計、資料存取效能優化與系統模組化開發。<br>
+          前端方面擁有 3 年 Vue3 + Quasar 與 2 年 Angular 開發經驗，能獨立完成元件設計與畫面開發。<br>
+          也具備 1 年 Android App 開發經驗（Java/Kotlin），熟悉 API 串接與基本 UI 邏輯實作。<br>
+          參與過金融客服系統、智慧物流 App、RWD 網站優化等實務專案，擅長跨技術整合與系統效能優化，致力於提升用戶體驗與開發效率。<br>
+          具備強烈的自學能力，成功自學 Java/Kotlin 並實際應用於行動端專案。<br>
+          曾協助並指導 2 名工程師完成專案交付，具備團隊合作與技術傳承經驗。<br>
+          技術方面，熟悉 C# .NET、Vue3、Angular、Android（Java/Kotlin），熟悉基本 HTML/CSS/JavaScript 語法，能配合框架進行前端開發。<br>
+          熟悉 SQL Server 與雲端部署（Azure）、CI/CD 流程，並具備系統架構設計、測試流程規劃與技術文件撰寫經驗。<br>
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>熱門技能</h2>
+        <ul>
+          <li>C#</li>
+          <li>ASP.NET Core</li>
+          <li>Vue3 / Quasar</li>
+          <li>Angular</li>
+          <li>SQL Server</li>
+          <li>Azure / CI/CD</li>
+          <li>Android (Java/Kotlin)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>工作經歷</h2>
+
+        <h5>優利系統公司 | 顧問</h5>
+        <p><em>2022 年 4 月 - 至今（3 年 6 個月） | 台北</em></p>
+        <ul>
+          <li>後端：使用 .NET Core 6 + Dapper 建構 RESTful API → 優化查詢效能、降低 50% 維護成本。</li>
+          <li>前端：採用 Vue3 + Quasar 開發模組化 UI，提升使用者體驗。</li>
+          <li>即時通訊：整合 SignalR 與電話客服系統，確保穩定性。</li>
+          <li>報表處理：使用 RDLC 進行資料視覺化與報表產出。</li>
+          <li>雲端維運：使用 Azure 部署與環境管理，導入 CI/CD 自動化流程。</li>
+          <li>最佳化：使用 ChatGPT 產生程式碼模版 → 減少 90% 重複性工作。</li>
+        </ul>
+
+        <h5>德義資訊 | 程式設計師</h5>
+        <p><em>2020 年 8 月 - 2022 年 2 月 | 台北</em></p>
+        <ul>
+          <li>開發 Angular 8 + .NET Core API 的碼頭管理系統，提升碼頭作業效率。</li>
+          <li>開發物流 PDA App（Java / WebView），優化 UI/UX 與後端 API 整合。</li>
+          <li>開發 T-Cat 宅急便 App（Kotlin + .NET Core API），導入 QRCode 功能，填寫時間縮短 50%。</li>
+          <li>處理高效能數據（億筆級資料） → 優化查詢由 30 分鐘降至 5 分鐘。</li>
+          <li>RWD 前端改版，改善行動端體驗。</li>
+          <li>指導 2 名初階工程師，協助完成專案交付。</li>
+        </ul>
+
+        <h5>叡揚資訊 | 程式設計師</h5>
+        <p><em>2019 年 2 月 - 2020 年 7 月 | 台北</em></p>
+        <ul>
+          <li>開發與維護 HR 人事差勤系統（ASP.NET MVC/WebForm + SQL Server）。</li>
+          <li>設計與優化 Stored Procedure，將差勤計算時間縮短 20 秒。</li>
+          <li>維護多家客戶專案，提供技術支援與問題修正。</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>學歷</h2>
+        <p>實踐大學 | 金融管理系 | 2014 - 2018</p>
+      </div>
     </div>
 
-    <!-- 熱門技能 -->
-    <div class="section">
-      <h2>熱門技能</h2>
-      <ul>
-        <li>C#</li>
-        <li>ASP.NET Core</li>
-        <li>Vue3 / Quasar</li>
-        <li>Angular</li>
-        <li>SQL Server</li>
-        <li>Azure / CI/CD</li>
-        <li>Android (Java/Kotlin)</li>
-      </ul>
-    </div>
+    <!-- English Version -->
+    <div id="lang-en" class="lang-section">
+      <div class="section">
+        <h2>Summary</h2>
+        <p>
+          7 years of experience in C# .NET backend development, specializing in RESTful API design, data access performance optimization, and modular architecture.<br>
+          3 years of experience with Vue3 + Quasar and 2 years with Angular, capable of building modular UI components and pages independently.<br>
+          1 year of Android development experience (Java/Kotlin), skilled in API integration and UI logic implementation.<br>
+          Worked on financial customer service systems, smart logistics apps, and RWD website optimization. Strong in cross-technology integration and system performance tuning to enhance user experience and development efficiency.<br>
+          Self-learner with proven ability, successfully learned Java/Kotlin and applied them to mobile projects.<br>
+          Mentored and guided 2 junior engineers to project delivery, demonstrating teamwork and knowledge-sharing.<br>
+          Proficient in C# .NET, Vue3, Angular, Android (Java/Kotlin), and familiar with HTML/CSS/JavaScript for frontend development.<br>
+          Experienced with SQL Server, cloud deployment (Azure), CI/CD pipelines, system architecture design, testing workflow planning, and technical documentation.<br>
+        </p>
+      </div>
 
-    <!-- 經歷 -->
-    <div class="section">
-      <h2>工作經歷</h2>
+      <div class="section">
+        <h2>Key Skills</h2>
+        <ul>
+          <li>C#</li>
+          <li>ASP.NET Core</li>
+          <li>Vue3 / Quasar</li>
+          <li>Angular</li>
+          <li>SQL Server</li>
+          <li>Azure / CI/CD</li>
+          <li>Android (Java/Kotlin)</li>
+        </ul>
+      </div>
 
-      <h5>優利系統公司 | 顧問</h5>
-      <p><em>2022 年 4 月 - 至今（3 年 6 個月） | 台北</em></p>
-      <ul>
-        <li>後端：使用 .NET Core 6 + Dapper 建構 RESTful API → 優化查詢效能、降低 50% 維護成本。</li>
-        <li>前端：採用 Vue3 + Quasar 開發模組化 UI，提升使用者體驗。</li>
-        <li>即時通訊：整合 SignalR 與電話客服系統，確保穩定性。</li>
-        <li>報表處理：使用 RDLC 進行資料視覺化與報表產出。</li>
-        <li>雲端維運：使用 Azure 部署與環境管理，導入 CI/CD 自動化流程。</li>
-        <li>最佳化：使用 ChatGPT 產生程式碼模版 → 減少 90% 重複性工作。</li>
-      </ul>
+      <div class="section">
+        <h2>Work Experience</h2>
 
-      <h5>德義資訊 | 程式設計師</h5>
-      <p><em>2020 年 8 月 - 2022 年 2 月 | 台北</em></p>
-      <ul>
-        <li>開發 Angular 8 + .NET Core API 的碼頭管理系統，提升碼頭作業效率。</li>
-        <li>開發物流 PDA App（Java / WebView），優化 UI/UX 與後端 API 整合。</li>
-        <li>開發 T-Cat 宅急便 App（Kotlin + .NET Core API），導入 QRCode 功能，填寫時間縮短 50%。</li>
-        <li>處理高效能數據（億筆級資料） → 優化查詢由 30 分鐘降至 5 分鐘。</li>
-        <li>RWD 前端改版，改善行動端體驗。</li>
-        <li>指導 2 名初階工程師，協助完成專案交付。</li>
-      </ul>
+        <h5>Unisys | Consultant</h5>
+        <p><em>Apr 2022 – Present (3 years 6 months) | Taipei</em></p>
+        <ul>
+          <li>Backend: Built RESTful APIs using .NET Core 6 + Dapper → optimized query performance and reduced maintenance cost by 50%.</li>
+          <li>Frontend: Developed modular UI with Vue3 + Quasar to enhance user experience.</li>
+          <li>Real-time communication: Integrated SignalR with call center system to ensure stability.</li>
+          <li>Reporting: Designed data visualization and reports with RDLC.</li>
+          <li>Cloud: Managed deployment and environment via Azure, implemented CI/CD automation.</li>
+          <li>Optimization: Leveraged ChatGPT to generate code templates → reduced 90% of repetitive work.</li>
+        </ul>
 
-      <h5>叡揚資訊 | 程式設計師</h5>
-      <p><em>2019 年 2 月 - 2020 年 7 月 | 台北</em></p>
-      <ul>
-        <li>開發與維護 HR 人事差勤系統（ASP.NET MVC/WebForm + SQL Server）。</li>
-        <li>設計與優化 Stored Procedure，將差勤計算時間縮短 20 秒。</li>
-        <li>維護多家客戶專案，提供技術支援與問題修正。</li>
-      </ul>
-    </div>
+        <h5>Frog Jump (Te-Yi Information) | Software Engineer</h5>
+        <p><em>Aug 2020 – Feb 2022 | Taipei</em></p>
+        <ul>
+          <li>Developed a port management system using Angular 8 + .NET Core API → improved port operations efficiency.</li>
+          <li>Developed logistics PDA App (Java/WebView), improving UI/UX and API integration.</li>
+          <li>Developed T-Cat App (Kotlin + .NET Core API) with QR Code integration → reduced form-filling time by 50%.</li>
+          <li>Handled large-scale data processing (hundreds of millions of records) → optimized queries from 30 minutes down to 5 minutes.</li>
+          <li>Led RWD frontend redesign to improve mobile user experience.</li>
+          <li>Mentored 2 junior engineers to complete project deliveries.</li>
+        </ul>
 
-    <!-- 學歷 -->
-    <div class="section">
-      <h2>學歷</h2>
-      <p>實踐大學 | 金融管理系 | 2014 - 2018</p>
+        <h5>Galaxy Software Services | Software Engineer</h5>
+        <p><em>Feb 2019 – Jul 2020 | Taipei</em></p>
+        <ul>
+          <li>Developed and maintained HR attendance system (ASP.NET MVC/WebForm + SQL Server).</li>
+          <li>Designed and optimized Stored Procedures → reduced attendance calculation time by 20 seconds.</li>
+          <li>Maintained multiple client projects, providing technical support and bug fixes.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Education</h2>
+        <p>Shih Chien University | Department of Finance | 2014 – 2018</p>
+      </div>
     </div>
 
   </div>
 
-  <footer class="text-center py-3 mt-4 bg-light">
-  </footer>
+  <footer class="text-center py-3 mt-4 bg-light"></footer>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
